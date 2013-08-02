@@ -48,12 +48,16 @@
 
 - (void)handleGreyTap:(UITapGestureRecognizer *)sender {
     
-    [self.topView bounce];
+    [self.topView bounce:^(BOOL finished) {
+        if (finished) {
+            NSLog(@"Bounce finished");
+        }
+    }];
 }
 
 - (void)handleWhiteTap:(UITapGestureRecognizer *)sender {
     
-    [self.bottomView bounce];
+    [self.bottomView bounce:nil];
 }
 
 - (IBAction)resetButtonPressed:(UIButton *)sender {

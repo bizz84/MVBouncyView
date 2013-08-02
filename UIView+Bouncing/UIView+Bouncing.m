@@ -44,14 +44,16 @@ typedef enum {
 
 - (void)cancelBounce {
     
-    [self.layer removeAllAnimations];
-    // If originalFrame was ever set, reset 
-    if (self.originalFrame.size.width != 0.0f && self.originalFrame.size.height != 0.0f)
-        self.frame = self.originalFrame;
-    self.bouncing = NO;
+    if (self.bouncing) {
+        [self.layer removeAllAnimations];
+        // If originalFrame was ever set, reset 
+        if (self.originalFrame.size.width != 0.0f && self.originalFrame.size.height != 0.0f)
+            self.frame = self.originalFrame;
+        self.bouncing = NO;
+    }
 }
 
-- (void)bounce {
+- (void)bounce:(void(^)(BOOL finished))doneBlock {
     
     // Lazy initialize properties
     if (self.bounceAmplitude <= 0.0f) {
@@ -74,10 +76,10 @@ typedef enum {
     }
     [self.layer removeAllAnimations];
     self.bouncing = YES;
-    [self recursiveBounce:BounceDirectionHorz amplitude:self.bounceAmplitude referenceFrame:self.frame];
+    [self recursiveBounce:BounceDirectionHorz amplitude:self.bounceAmplitude referenceFrame:self.frame done:doneBlock];
 }
 
-- (void)recursiveBounce:(BounceDirection)direction amplitude:(float)amplitude referenceFrame:(CGRect)refFrame {
+- (void)recursiveBounce:(BounceDirection)direction amplitude:(float)amplitude referenceFrame:(CGRect)refFrame done:(void(^)(BOOL finished))doneBlock {
 
     CGSize size = refFrame.size;
     CGPoint center = CGPointMake(refFrame.origin.x + size.width / 2.0f, refFrame.origin.y + size.height / 2.0f);
@@ -100,10 +102,13 @@ typedef enum {
                 float targetAmplitude = amplitude / self.bounceAttenuation;
                 float nextAmplitude = targetAmplitude > 1.0f ? targetAmplitude : 1.0f;
                 BounceDirection nextDirection = direction == BounceDirectionHorz ? BounceDirectionVert : BounceDirectionHorz;
-                [self recursiveBounce:nextDirection amplitude:nextAmplitude referenceFrame:refFrame];
+                [self recursiveBounce:nextDirection amplitude:nextAmplitude referenceFrame:refFrame done:doneBlock];
             }
             else {
                 self.bouncing = NO;
+                if (doneBlock != nil) {
+                    doneBlock(YES);
+                }
             }
         }
     }];

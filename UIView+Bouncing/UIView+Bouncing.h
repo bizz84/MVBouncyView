@@ -25,7 +25,7 @@
 /* Duration of a single bounce animation. Must be > 0.0f */
 @property float bounceDuration;
 
-- (void)bounce;
+- (void)bounce:(void(^)(BOOL finished))doneBlock;
 - (void)cancelBounce;
 
 @end

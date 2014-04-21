@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "MVBouncyView"
   s.version      = "1.0.0"
-  s.summary      = "UIView category providing bouncing functionality "
+  s.summary      = "UIView category to add bouncing animations to your UIViews"
 
   s.description  = <<-DESC
                     This project includes a simple UIView Category that can be used to add bouncing animations to your UIViews.

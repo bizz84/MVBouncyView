@@ -17,11 +17,11 @@
 		6532AC0817AC34BF00FB635E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532AC0717AC34BF00FB635E /* Default@2x.png */; };
 		6532AC0A17AC34BF00FB635E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532AC0917AC34BF00FB635E /* Default-568h@2x.png */; };
 		6532AC0D17AC34BF00FB635E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6532AC0B17AC34BF00FB635E /* MainStoryboard_iPhone.storyboard */; };
-		6532AC1317AC34BF00FB635E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532AC1217AC34BF00FB635E /* ViewController.m */; };
+		6532AC1317AC34BF00FB635E /* MVBouncingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532AC1217AC34BF00FB635E /* MVBouncingViewController.m */; };
 		6532AC2317AC498D00FB635E /* CameraBoom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532AC2117AC498D00FB635E /* CameraBoom@2x.png */; };
 		6532AC2417AC498D00FB635E /* CameraCube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532AC2217AC498D00FB635E /* CameraCube@2x.png */; };
 		6532AC2617AC4BB900FB635E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6532AC2517AC4BB900FB635E /* QuartzCore.framework */; };
-		6532AC2A17AC4C0E00FB635E /* UIView+Bouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532AC2917AC4C0E00FB635E /* UIView+Bouncing.m */; };
+		6532AC2A17AC4C0E00FB635E /* UIView+MVBouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532AC2917AC4C0E00FB635E /* UIView+MVBouncing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +39,13 @@
 		6532AC0717AC34BF00FB635E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6532AC0917AC34BF00FB635E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6532AC0C17AC34BF00FB635E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		6532AC1117AC34BF00FB635E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6532AC1217AC34BF00FB635E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6532AC1117AC34BF00FB635E /* MVBouncingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVBouncingViewController.h; sourceTree = "<group>"; };
+		6532AC1217AC34BF00FB635E /* MVBouncingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVBouncingViewController.m; sourceTree = "<group>"; };
 		6532AC2117AC498D00FB635E /* CameraBoom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CameraBoom@2x.png"; sourceTree = "<group>"; };
 		6532AC2217AC498D00FB635E /* CameraCube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CameraCube@2x.png"; sourceTree = "<group>"; };
 		6532AC2517AC4BB900FB635E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6532AC2817AC4C0E00FB635E /* UIView+Bouncing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Bouncing.h"; sourceTree = "<group>"; };
-		6532AC2917AC4C0E00FB635E /* UIView+Bouncing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Bouncing.m"; sourceTree = "<group>"; };
+		6532AC2817AC4C0E00FB635E /* UIView+MVBouncing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MVBouncing.h"; sourceTree = "<group>"; };
+		6532AC2917AC4C0E00FB635E /* UIView+MVBouncing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MVBouncing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +94,13 @@
 		6532ABF917AC34BF00FB635E /* BouncyView */ = {
 			isa = PBXGroup;
 			children = (
-				6532AC2717AC4C0E00FB635E /* UIView+Bouncing */,
+				6532AC2717AC4C0E00FB635E /* UIView+MVBouncing */,
 				6532AC1917AC351200FB635E /* Images */,
 				6532AC0217AC34BF00FB635E /* AppDelegate.h */,
 				6532AC0317AC34BF00FB635E /* AppDelegate.m */,
 				6532AC0B17AC34BF00FB635E /* MainStoryboard_iPhone.storyboard */,
-				6532AC1117AC34BF00FB635E /* ViewController.h */,
-				6532AC1217AC34BF00FB635E /* ViewController.m */,
+				6532AC1117AC34BF00FB635E /* MVBouncingViewController.h */,
+				6532AC1217AC34BF00FB635E /* MVBouncingViewController.m */,
 				6532ABFA17AC34BF00FB635E /* Supporting Files */,
 			);
 			path = BouncyView;
@@ -129,13 +129,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		6532AC2717AC4C0E00FB635E /* UIView+Bouncing */ = {
+		6532AC2717AC4C0E00FB635E /* UIView+MVBouncing */ = {
 			isa = PBXGroup;
 			children = (
-				6532AC2817AC4C0E00FB635E /* UIView+Bouncing.h */,
-				6532AC2917AC4C0E00FB635E /* UIView+Bouncing.m */,
+				6532AC2817AC4C0E00FB635E /* UIView+MVBouncing.h */,
+				6532AC2917AC4C0E00FB635E /* UIView+MVBouncing.m */,
 			);
-			path = "UIView+Bouncing";
+			path = "UIView+MVBouncing";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -208,8 +208,8 @@
 			files = (
 				6532AC0017AC34BF00FB635E /* main.m in Sources */,
 				6532AC0417AC34BF00FB635E /* AppDelegate.m in Sources */,
-				6532AC1317AC34BF00FB635E /* ViewController.m in Sources */,
-				6532AC2A17AC4C0E00FB635E /* UIView+Bouncing.m in Sources */,
+				6532AC1317AC34BF00FB635E /* MVBouncingViewController.m in Sources */,
+				6532AC2A17AC4C0E00FB635E /* UIView+MVBouncing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

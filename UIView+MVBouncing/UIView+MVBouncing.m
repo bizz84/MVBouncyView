@@ -8,7 +8,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "UIView+Bouncing.h"
+#import "UIView+MVBouncing.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
@@ -24,22 +24,22 @@ NSString const *kBounceDurationKey = @"com.BouncingView.BounceDuration";
 
 NSString const *kBounceOriginalFrameKey = @"com.BouncingView.BounceOriginalFrame";
 
-#define kDefaultBounceDuration 0.3f
-#define kDefaultBounceAmplitude 1.25f
-#define kDefaultBounceAttenuation 1.05f
+static const CGFloat kDefaultBounceDuration = 0.3f;
+static const CGFloat kDefaultBounceAmplitude = 1.25f;
+static const CGFloat kDefaultBounceAttenuation = 1.05f;
 
 typedef enum {
     BounceDirectionHorz,
     BounceDirectionVert,
 } BounceDirection;
 
-@interface UIView(Bouncing_Private)
+@interface UIView(MVBouncing)
 
 @property CGRect originalFrame;
 
 @end
 
-@implementation UIView(Bouncy)
+@implementation UIView(MVBouncing)
 
 
 - (void)cancelBounce {
@@ -64,7 +64,7 @@ typedef enum {
     if (self.bounceAttenuation <= 0.0f) {
         self.bounceAttenuation = kDefaultBounceAttenuation;
     }
-    NSAssert(self.bounceAttenuation >= 1.0f, @"bounceAmplitude must be >= 1.0");
+    NSAssert(self.bounceAttenuation >= 1.0f, @"bounceAttenuation must be >= 1.0");
     
     if (self.bounceDuration <= 0.0f) {
         self.bounceDuration = kDefaultBounceDuration;

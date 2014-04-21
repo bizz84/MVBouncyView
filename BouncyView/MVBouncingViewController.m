@@ -9,16 +9,16 @@
  */
 
 
-#import "ViewController.h"
-#import "UIView+Bouncing.h"
+#import "MVBouncingViewController.h"
+#import "UIView+MVBouncing.h"
 
-@interface ViewController ()
+@interface MVBouncingViewController ()
 
-@property UITapGestureRecognizer *grayTapRecognizer;
-@property UITapGestureRecognizer *whiteTapRecognizer;
+@property (strong, nonatomic) UITapGestureRecognizer *grayTapRecognizer;
+@property (strong, nonatomic) UITapGestureRecognizer *whiteTapRecognizer;
 @end
 
-@implementation ViewController
+@implementation MVBouncingViewController
 
 - (void)viewDidLoad
 {
@@ -38,12 +38,6 @@
     self.bottomView.bounceAmplitude = 1.25f;
     self.bottomView.bounceAttenuation = 1.05f;
     self.bottomView.bounceDuration = 0.3f;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)handleGreyTap:(UITapGestureRecognizer *)sender {

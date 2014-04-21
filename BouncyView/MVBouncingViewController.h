@@ -8,24 +8,14 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
 
-/**
- * UIView Category to add bounce functionality
- */
-@interface UIView(Bouncing)
+#import <UIKit/UIKit.h>
 
-/* Whether view is currently bouncing */
-@property (readonly) BOOL bouncing;
+@interface MVBouncingViewController : UIViewController
 
-/* Bounce amplitude. Must be >= 1.0 */
-@property float bounceAmplitude;
-/* Bounce attenuation. Set to 1.0 for infinite bouncing, set to a value greater than 1.0 to attenuate */
-@property float bounceAttenuation;
-/* Duration of a single bounce animation. Must be > 0.0f */
-@property float bounceDuration;
+@property (strong, nonatomic) IBOutlet UIImageView *topView;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomView;
 
-- (void)bounce:(void(^)(BOOL finished))doneBlock;
-- (void)cancelBounce;
+- (IBAction)resetButtonPressed:(UIButton *)sender;
 
 @end

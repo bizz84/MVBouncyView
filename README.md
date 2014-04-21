@@ -5,9 +5,10 @@ This project includes a simple UIView Category that can be used to add bouncing 
 
 The category extends UIView with the following properties:
 
-bounceAmplitude
-bounceAttenuation
-bounceDuration
+- bounceAmplitude<br/>
+- bounceAttenuation<br/>
+- bounceDuration<br/>
+
 A sample application demonstrating the usage of the control is included. The component can be used in other applications simply by dragging the UIView+MVBouncing.* files into XCode.
 
 Preview

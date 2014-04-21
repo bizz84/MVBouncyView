@@ -14,7 +14,7 @@ A sample application demonstrating the usage of the control is included. The com
 Preview
 -------------------------------------------------------
 
-![MVBouncyView preview](https://github.com/bizz84/MVBouncyView/raw/master/screenshots/preview.png "MVBouncyView preview")
+![MVBouncyView preview](https://github.com/bizz84/MVBouncyView/raw/master/preview.png "MVBouncyView preview")
 
 License
 -------------------------------------------------------

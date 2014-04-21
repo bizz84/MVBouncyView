@@ -19,8 +19,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'UIView+MVBouncing/*.{h,m}'
 
-  s.screenshots  = ["https://github.com/bizz84/MVBouncyView/raw/master/preview.png"]
-
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
 
   s.requires_arc = true

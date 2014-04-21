@@ -33,7 +33,7 @@ typedef enum {
     BounceDirectionVert,
 } BounceDirection;
 
-@interface UIView(MVBouncing)
+@interface UIView(MVBouncing_Private)
 
 @property CGRect originalFrame;
 

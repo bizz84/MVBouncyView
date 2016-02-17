@@ -9,7 +9,7 @@ The category extends UIView with the following properties:
 - bounceAttenuation<br/>
 - bounceDuration<br/>
 
-A sample application demonstrating the usage of the control is included. The component can be used in other applications simply by dragging the UIView+MVBouncing.* files into XCode.
+A sample application demonstrating the usage of the control is included. The component can be used in other applications simply by dragging the UIView+MVBouncing.* files into Xcode.
 
 Preview
 -------------------------------------------------------
